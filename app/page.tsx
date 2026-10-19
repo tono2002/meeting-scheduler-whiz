@@ -69,7 +69,7 @@ export default function Page() {
           <li className="flex gap-2.5 text-[13px] leading-snug text-stone-600">
             <span className="mt-[0.45rem] h-1 w-1 shrink-0 rounded-full bg-accent" />
             <span>
-              La reunión dura 1 h 30 min en Manolo Bakes, Avenida de América, y te pagamos 20 € por Bizum por tu tiempo.{" "}
+              La reunión dura entre 40 min y 1 h en Manolo Bakes, Avenida de América, y te pagamos 20 € por Bizum por tu tiempo.{" "}
               <a href={MAPS_URL} target="_blank" rel="noopener" className="font-medium text-accent underline underline-offset-4">
                 Cómo llegar
               </a>
