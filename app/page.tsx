@@ -10,7 +10,7 @@ function Hero() {
   if (hasPhoto) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src="/manolo.jpg" alt="Manolo Bakes" className="h-56 w-full object-cover sm:h-72 sm:rounded-3xl" />
+      <img src="/manolo.jpg" alt="Manolo Bakes" className="h-60 w-full object-cover object-[center_35%] sm:h-80 sm:rounded-3xl" />
     );
   }
   return (
