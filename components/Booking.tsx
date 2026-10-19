@@ -59,8 +59,8 @@ export default function Booking() {
   };
 
   return (
-    <section id="reserva" className="mt-12">
-      <h2 className="font-serif text-2xl font-semibold text-stone-900">Elige tu hora</h2>
+    <section id="reserva" className="mt-6">
+      <h2 className="font-serif text-xl font-semibold text-stone-900">Elige tu hora</h2>
 
       {notice && (
         <p role="alert" className="mt-4 rounded-2xl bg-amber-50 px-4 py-3 text-amber-900">
@@ -81,7 +81,7 @@ export default function Booking() {
 
       {days && days.length > 0 && (
         <>
-          <div role="tablist" className="mt-5 grid grid-cols-3 gap-2 rounded-2xl bg-stone-100 p-1.5">
+          <div role="tablist" className="mt-3 grid grid-cols-3 gap-2 rounded-2xl bg-stone-100 p-1.5">
             {days.map((d) => {
               const active = d.date === activeDate;
               return (
@@ -106,7 +106,7 @@ export default function Booking() {
           ].map(
             (group) =>
               group.slots.length > 0 && (
-                <div key={group.label} className="mt-6">
+                <div key={group.label} className="mt-4">
                   <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-stone-500">{group.label}</h3>
                   <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4">
                     {group.slots.map((slot) => {
@@ -300,7 +300,7 @@ function Confirmation({ done }: { done: Done }) {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => ref.current?.scrollIntoView({ behavior: "smooth", block: "center" }), []);
   return (
-    <section ref={ref} className="animate-fade mt-12 rounded-3xl bg-[#f3f2fd] px-6 py-8 text-center">
+    <section ref={ref} className="animate-fade mt-6 rounded-3xl bg-[#f3f2fd] px-6 py-8 text-center">
       <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent text-2xl text-white">✓</div>
       <h2 className="mt-5 font-serif text-2xl font-semibold leading-snug text-stone-900">
         ¡Hecho, {done.name}! Nos vemos el {longDay(done.date)} a las {done.time} en Manolo Bakes.
