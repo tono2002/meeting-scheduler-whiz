@@ -40,7 +40,15 @@ export default function Page() {
     <main className="mx-auto w-full max-w-2xl pb-10 sm:px-6 sm:pt-6">
       <Hero />
       <div className="px-5 sm:px-0">
-        <h1 className="mt-4 font-serif text-[1.6rem] font-semibold leading-tight tracking-tight text-stone-900 sm:text-3xl">
+        {existsSync(path.join(process.cwd(), "public", "nosotros.jpg")) && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src="/nosotros.jpg"
+            alt="Tono y Jo"
+            className="relative -mt-10 h-20 w-20 rounded-2xl object-cover shadow-md ring-4 ring-white sm:h-24 sm:w-24"
+          />
+        )}
+        <h1 className="mt-3 font-serif text-[1.6rem] font-semibold leading-tight tracking-tight text-stone-900 sm:text-3xl">
           Tómate un café con Tono y Jo
         </h1>
         <Suspense fallback={null}>
